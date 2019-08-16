@@ -1,5 +1,7 @@
 {
   "name": "Comuni",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
