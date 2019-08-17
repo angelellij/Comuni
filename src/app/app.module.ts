@@ -9,16 +9,17 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import {AngularFireModule} from '@angular/fire';
+import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
-import {AngularFirestoreModule, FirestoreSettingsToken} from '@angular/fire/firestore';
+import { AngularFirestoreModule, FirestoreSettingsToken} from '@angular/fire/firestore';
+import { AngularFireAuthModule } from '@angular/fire/auth';
 
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,
             AngularFireModule.initializeApp(environment.firebase),
-            AngularFirestoreModule
+            AngularFirestoreModule, AngularFireAuthModule
   ],
   providers: [
     StatusBar,

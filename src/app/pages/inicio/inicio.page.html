@@ -2,11 +2,11 @@
     <img src="../../assets/logo.jpg">
   <ion-item>
     <ion-label position="floating"> email </ion-label>
-    <ion-input type="text" name="mail"></ion-input>
+    <ion-input type="text" [(ngModel)]="email" name="email"></ion-input>
   </ion-item>
   <ion-item>
     <ion-label position="floating"> Contraseña </ion-label>
-    <ion-input type="text" name="contrasena"></ion-input>
+    <ion-input type="text" [(ngModel)]="password" name="password"></ion-input>
   </ion-item>
-  <ion-button expand="block"> Login </ion-button>
+  <ion-button (click)="onSubmitLogin()" expand="block"> Login </ion-button>
 </ion-content>
