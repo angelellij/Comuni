@@ -15,7 +15,9 @@ import { AngularFirestoreModule, FirestoreSettingsToken} from '@angular/fire/fir
 import { AngularFireAuthModule } from '@angular/fire/auth';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [
+    AppComponent, 
+  ],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,
             AngularFireModule.initializeApp(environment.firebase),

@@ -1,4 +1,4 @@
-;export class Comentariomodel {
+export class Comentariomodel {
 
     private id:number;
     private texto:string;

@@ -6,6 +6,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { MensajesPage } from './mensajes.page';
+import { ComuniModule } from 'src/app/components/comuni-module/comuni.module';
 
 const routes: Routes = [
   {
@@ -19,8 +20,11 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     IonicModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    ComuniModule
   ],
-  declarations: [MensajesPage]
+  declarations: [
+    MensajesPage
+  ]
 })
 export class MensajesPageModule {}

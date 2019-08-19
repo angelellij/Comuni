@@ -19,8 +19,12 @@ export class InicioPage implements OnInit {
 
   onSubmitLogin(){
     this.authService.login(this.email,this.password).then(res=>{
-      this.router.navigate(['/home']);
+      this.router.navigate(['tabs']);
     }).catch(err=>alert("Los datos ingresados no coinciden"));
+  }
+
+  redirectRegistrarse(){
+    this.router.navigate(["registro"]);
   }
 
 }

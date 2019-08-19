@@ -5,13 +5,12 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
 
-import { NotificacionesPage } from './notificaciones.page';
-import { ComuniModule } from 'src/app/components/comuni-module/comuni.module';
+import { RegistroPage } from './registro.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: NotificacionesPage
+    component: RegistroPage
   }
 ];
 
@@ -20,11 +19,8 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     IonicModule,
-    RouterModule.forChild(routes),
-    ComuniModule
+    RouterModule.forChild(routes)
   ],
-  declarations: [
-    NotificacionesPage
-  ]
+  declarations: [RegistroPage]
 })
-export class NotificacionesPageModule {}
+export class RegistroPageModule {}
