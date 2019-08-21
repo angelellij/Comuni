@@ -1,6 +1,5 @@
 import { Input, Component, OnInit } from '@angular/core';
-import { AngularFireAuth } from '@angular/fire/auth';
-import { Router } from '@angular/router';
+import { HeaderListadoComponent } from '../header-listado/header-listado.component';
 
 @Component({
   selector: 'app-header-tabs',
@@ -10,14 +9,17 @@ import { Router } from '@angular/router';
 export class HeaderTabsComponent implements OnInit {
   @Input() titulo:string;
 
-  constructor(private AFauth:AngularFireAuth, private router:Router) { }
+  constructor() { }
 
   ngOnInit() {}
 
-  onLogout(){
-    this.AFauth.auth.signOut().then(()=>{
-      this.router.navigate(['inicio'])
-    })    
+  mostrarHeaderListado(){
+    var x = document.getElementById("app-header-listado");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
   }
-
+  
 }

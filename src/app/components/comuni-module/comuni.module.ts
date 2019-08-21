@@ -5,11 +5,13 @@ import { PostResumenComponent } from '../post-resumen/post-resumen.component';
 import { IonicModule } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { HeaderListadoComponent } from '../header-listado/header-listado.component';
 
 
 @NgModule({
   declarations: [
     HeaderTabsComponent,
+    HeaderListadoComponent,
     PostResumenComponent
   ],
   imports: [
@@ -20,7 +22,8 @@ import { RouterModule } from '@angular/router';
   ],
   exports:[
     HeaderTabsComponent,
-    PostResumenComponent
+    PostResumenComponent,
+    HeaderListadoComponent
   ]
 })
 export class ComuniModule { }
