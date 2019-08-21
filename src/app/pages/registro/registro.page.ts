@@ -2,11 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { isNullOrUndefined } from 'util';
 import { AuthService } from 'src/app/services/auth.service';
+import { DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-registro',
   templateUrl: './registro.page.html',
   styleUrls: ['./registro.page.scss'],
+  providers: [ DatePipe ]
 })
 export class RegistroPage implements OnInit {
   nombre:string;
@@ -15,8 +17,7 @@ export class RegistroPage implements OnInit {
   email2:string;
   password:string;
   password2:string;
-
-
+  date = Date.now();
 
   constructor(private route:Router, private auth:AuthService) { }
 
@@ -38,7 +39,7 @@ export class RegistroPage implements OnInit {
       alert("Los datos no coinciden");
     }
     else{
-      this.auth.registrarse(this.nombre,this.apellido,this.email,this.password).then( ()=>{
+      this.auth.registrarse(this.nombre,this.apellido,this.email,this.password, this.date).then( ()=>{
         this.route.navigate(['tabs']);
       }).catch(err => console.log(err));
     }
