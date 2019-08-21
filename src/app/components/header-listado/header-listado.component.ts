@@ -14,13 +14,12 @@ export class HeaderListadoComponent implements OnInit {
   ngOnInit() {}
 
   redirigirPerfil(){
-    console.log("Va al perfil");
-    //this.router.navigate("Perfil");
+    this.router.navigate(["tabs/perfil-conf"]);
   }
 
   redirigirConfiguracion(){
     console.log("Va al configuracion");
-    //this.router.navigate("configuracion");
+    this.router.navigate(["tabs/configuracion-general"]);
   }
 
   onLogout(){

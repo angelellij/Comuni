@@ -44,6 +44,69 @@ const routes: Routes = [
         ]
       },
       {
+        path: 'configuracion-general',
+        children: [
+          {
+            path: '',
+            loadChildren: '../configuracion/configuracion-general/configuracion-general.module#ConfiguracionGeneralPageModule'
+          }
+        ]
+      },
+      {
+        path: 'perfil-conf',
+        children: [
+          {
+            path: '',
+            loadChildren: '../configuracion/perfil-conf/perfil-conf.module#PerfilConfPageModule'
+          }
+        ]
+      },
+      {
+        path: 'espacios-conf',
+        children: [
+          {
+            path: '',
+            loadChildren: '../configuracion/espacios-conf/espacios-conf.module#EspaciosConfPageModule'
+          }
+        ]
+      },
+      {
+        path: 'mensajes-conf',
+        children: [
+          {
+            path: '',
+            loadChildren: '../configuracion/mensajes-conf/mensajes-conf.module#MensajesConfPageModule'
+          }
+        ]
+      },
+      {
+        path: 'notificaciones-conf',
+        children: [
+          {
+            path: '',
+            loadChildren: '../configuracion/notificaciones-conf/notificaciones-conf.module#NotificacionesConfPageModule'
+          }
+        ]
+      },
+      {
+        path: 'privacidad-conf',
+        children: [
+          {
+            path: '',
+            loadChildren: '../configuracion/privacidad-conf/privacidad-conf.module#PrivacidadConfPageModule'
+          }
+        ]
+      },
+      {
+        path: 'acerca-de',
+        children: [
+          {
+            path: '',
+            loadChildren: '../configuracion/acerca-de/acerca-de.module#AcercaDePageModule'
+          }
+        ]
+      },
+      {
         path: '',
         redirectTo: '/tabs/home',
         pathMatch: 'full'
