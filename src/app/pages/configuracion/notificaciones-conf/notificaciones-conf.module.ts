@@ -6,6 +6,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { NotificacionesConfPage } from './notificaciones-conf.page';
+import { ComuniModule } from 'src/app/components/comuni-module/comuni.module';
 
 const routes: Routes = [
   {
@@ -19,7 +20,8 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     IonicModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    ComuniModule
   ],
   declarations: [NotificacionesConfPage]
 })

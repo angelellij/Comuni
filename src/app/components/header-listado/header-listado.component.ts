@@ -18,7 +18,6 @@ export class HeaderListadoComponent implements OnInit {
   }
 
   redirigirConfiguracion(){
-    console.log("Va al configuracion");
     this.router.navigate(["tabs/configuracion-general"]);
   }
 

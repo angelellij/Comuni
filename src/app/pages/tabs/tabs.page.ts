@@ -7,7 +7,12 @@ import { Component } from '@angular/core';
 })
 export class TabsPage {
 
+  tituloHeader:string;
 
   constructor() {}
 
+  cambiarTitulo(texto:string){
+    this.tituloHeader = texto;
+  }
+ 
 }

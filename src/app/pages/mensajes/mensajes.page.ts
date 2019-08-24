@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TabsPage } from '../tabs/tabs.page';
 
 @Component({
   selector: 'app-mensajes',
@@ -6,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./mensajes.page.scss'],
 })
 export class MensajesPage implements OnInit {
+  private titulo:string = "Mensajes";
 
-  constructor() { }
+  constructor(private tabs:TabsPage) { }
 
   ngOnInit() {
+    this.tabs.cambiarTitulo(this.titulo);
   }
 
 }

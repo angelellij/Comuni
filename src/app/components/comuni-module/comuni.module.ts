@@ -24,6 +24,9 @@ import { HeaderListadoComponent } from '../header-listado/header-listado.compone
     HeaderTabsComponent,
     PostResumenComponent,
     HeaderListadoComponent
+  ],
+  entryComponents:[
+    HeaderListadoComponent
   ]
 })
 export class ComuniModule { }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TabsPage } from '../../tabs/tabs.page';
 
 @Component({
   selector: 'app-notificaciones-conf',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NotificacionesConfPage implements OnInit {
 
-  constructor() { }
+  private titulo:string = "Configurar Notificaciones";
+
+  constructor(private tabs:TabsPage) { }
 
   ngOnInit() {
+    this.tabs.cambiarTitulo(this.titulo);
   }
 
 }

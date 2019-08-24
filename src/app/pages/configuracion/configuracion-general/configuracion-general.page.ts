@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { TabsPage } from '../../tabs/tabs.page';
 
 @Component({
   selector: 'app-configuracion-general',
@@ -7,10 +8,12 @@ import { Router } from '@angular/router';
   styleUrls: ['./configuracion-general.page.scss'],
 })
 export class ConfiguracionGeneralPage implements OnInit {
+  private titulo:string = "Configuracion"; 
 
-  constructor(private router:Router) { }
+  constructor(private router:Router, private tabs:TabsPage) { }
 
   ngOnInit() {
+    this.tabs.cambiarTitulo(this.titulo);
   }
 
   redirectPerfilConf(){
